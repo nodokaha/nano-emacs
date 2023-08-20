@@ -294,6 +294,7 @@
   ;; --- Display agenda ---
   (with-current-buffer (get-buffer-create "*nano-agenda*")
     (switch-to-buffer "*nano-agenda*")
+    (nano-agenda-mode t)
     (let ((inhibit-read-only t))
       (erase-buffer)
       (set-window-margins nil 2)
@@ -374,7 +375,7 @@
                         (if is-holidays (format " (%s)" (nth 0 is-holidays)) "")
                         'face 'nano-agenda-face-holidays))))
 
-    (nano-agenda-mode t)))
+    ))
 
 ;;
 (provide 'nano-agenda)
